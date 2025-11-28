@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mon Agence Web</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Mon Site</div>
+
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav id="nav-menu">
+        <a href="#home">Accueil</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">À propos</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div id="overlay"></div>
+</header>
+
+<section id="home" class="section home-section">
+    <div class="overlay-home"></div>
+    <div class="content">
+        <h1>Création de sites & Stratégie Marketing</h1>
+        <p>Nous vous aidons à lancer votre business en ligne.</p>
+        <a href="#contact" class="btn">Demander un devis</a>
+    </div>
+</section>
+
+<section id="services" class="section">
+    <h2>Nos Services</h2>
+    <div class="services-container">
+        <div class="service-card">
+            <h3>Création de sites web</h3>
+            <p>Sites professionnels, vitrines, e-commerce, responsive.</p>
+        </div>
+        <div class="service-card">
+            <h3>Conseils marketing</h3>
+            <p>Branding, stratégie, campagnes et identité visuelle.</p>
+        </div>
+        <div class="service-card">
+            <h3>SEO & Visibilité</h3>
+            <p>Optimisation Google, audit et positionnement.</p>
+        </div>
+    </div>
+</section>
+
+<section id="portfolio" class="section">
+    <h2>Portfolio</h2>
+    <div class="grid">
+        <div class="portfolio-card">
+            <img src="images/site1.jpg" alt="Projet 1">
+            <h3>Site vitrine</h3>
+            <p>Entreprise locale - design moderne et responsive.</p>
+        </div>
+        <div class="portfolio-card">
+            <img src="images/site2.jpg" alt="Projet 2">
+            <h3>Landing Page</h3>
+            <p>Optimisée pour les conversions et marketing digital.</p>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <h2>À propos</h2>
+    <p>Nous sommes une agence spécialisée dans la création numérique et la stratégie marketing.</p>
+</section>
+
+<section id="contact" class="section">
+    <h2>Obtenir votre devis</h2>
+    <p>Remplissez ce formulaire pour recevoir votre devis par email.</p>
+
+    <form id="devis-form">
+        <input type="text" name="name" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="details" placeholder="Décrivez votre projet" required></textarea>
+        <button type="submit" class="btn">Obtenir mon devis</button>
+    </form>
+</section>
+
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init("YOUR_PUBLIC_KEY"); // <-- Remplace par ton Public Key EmailJS
+    })();
+</script>
+<script src="script.js"></script>
+</body>
+</html>
